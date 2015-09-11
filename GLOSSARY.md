@@ -1,16 +1,14 @@
 ---
-title: "A-F"
+title: "All terms"
 type: "home"
+aliases:
+    - /glossary
 zones:
     - "Glossary"
-sections:
-    - "GlossaryAF"
 menu:
-    GlossaryAF:
+    Glossary:
         weight: 10
 ---
-
-Definitions for terms beginning from letter A to F.
 
 # Anemic domain model
 
@@ -40,3 +38,34 @@ domain of the software. The domain is completely agnostic of the application log
 # Domain-Driven Design
 
 An approach to the development of complex software adding on OOP to allow designers to concentrate on Business concerns rather than infrastructure ones.
+
+# Model
+
+An abstraction (eg. class diagram, mind map, plain text) that describes a domain and can be used to solve 
+problems related to that domain.
+
+# Principal
+
+In a security context, a *principal* is a defining characteristic of a subject that can be uniquely identified, like an 
+identifier, a name, a social-security number, a language, etc...
+
+# SPI
+
+Service Provider Interface (SPI) is an API intended to be implemented or extended by a third party. It can be used to 
+enable framework extension and replaceable components. SeedStack provides numerous SPI, allowing the developer to extend
+its capabilities and behaviors when needed. In SeedStack, all SPI live in a specific subpackage named `*.spi`. 
+
+# Strategic design
+
+Strategic Design is a set of principles for maintaining model integrity, distillation of the Domain Model and working 
+with multiple models.
+
+# Ubiquitous Language
+
+Common, rigorous language build up between developers and domain experts. This language should be based on the Domain 
+Model used in the software. It should evolve as the team's understanding of the domain grows.
+
+# Value object
+
+Objects holding related values and defined by them. They have no identity, meaning that two value objects holding the same 
+values are equals. They should be immutable.
