@@ -64,26 +64,12 @@ Always prefer the latest version.
 
 Our domain will have one aggregate. It will contain an aggregate root `User` and a value object `Post`. 
 
-<!--
-@startuml
-User -- Post 
-
-User : String pseudo
-User : List<Post> posts
-
-Post : String message
-Post : Date sentAt
-
-@enduml
--->
-<div class="row text-center">
-<img src="{dev-guide}/reusable-function/img/tutorial-class-diagram.svg" alt="Model diagram" style="width: 150px;"/>
-</div>
+![Domain architecture](img/tutorial-class-diagram.svg)
 
 The domain is not part of the API so it will be in the core module under the package `internal` 
 (`org.myorg.myproject.chat.internal`). This package will contain the domain model and the persistence infrastructure.
 
-![Domain architecture]({dev-guide}/reusable-function/img/domain-archi.png)
+![Domain architecture](img/domain-archi.png)
 
 Add the dependency to `org.seedstack.seed:seed-core-support-core`, `org.seedstack.business:business-jpa` and the JPA 
 specs to the core pom.
@@ -219,7 +205,7 @@ Our service is now injectable by project importing the `*-core` module. Now we w
 
 In this chapter, we will build a Web API exposing a REST resource to get all messages and post new messages.
 
-![REST architecture]({dev-guide}/reusable-function/img/rest-archi.png)
+![REST architecture](img/rest-archi.png)
 
 When building a function you should avoid to use composite. So you have to add all the needed dependencies in your pom.
 
@@ -409,7 +395,7 @@ In the `ChatResource`.
 
 The W20 code will be in `META-INF.resources.resources.chat-tuto` with the following architecture.
 
-![W20 architecture]({dev-guide}/reusable-function/img/w20-archi.png)
+![W20 architecture](img/w20-archi.png)
 
 Start by configuring the w20 routes and the modules.
 
@@ -577,7 +563,7 @@ and security as follow:
 
 Now you should be able to run the scaffold project with tomcat and see the chat after logged in as "john". 
 
-![W20 ui]({dev-guide}/reusable-function/img/chat-ui.png)
+![W20 ui](img/chat-ui.png)
 
 ---
 

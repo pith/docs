@@ -56,7 +56,7 @@ be a goal to strive for in most cases. This is the main reason behind modeling w
 
 Consider the following aggregate typologies:
  
-![aggregate-typologies](/img/business/aggregate-typologies.png)
+![aggregate-typologies](img/aggregate-typologies.png)
 
 The left topology is not expressive in terms of business and could often lead to glorified database editors. The right
 topology is an object graph which is too big to scale well when modified concurrently. The middle typology is the one to 

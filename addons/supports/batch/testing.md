@@ -16,32 +16,35 @@ menu:
         weight: 40
 ---
 
-For integration test, add Seed integration test support to your project. Check the documentation [here](/docs/seed/manual/testing/integration).
+To be able to do SeedStack integration testing, add the Seed integration test support to your project. Check the 
+documentation [here](/docs/seed/manual/testing/integration).
 
-* Following example checks that Seed injection works.
+# Basic testing
 
+The following example checks that the batch returns with the exit code 0 and subsequently that injection works.
 
-    @RunWith(SeedITRunner.class)
-    public class RunnerBatchIT {
+    import org.seedstack.seed.it.AbstractSeedIT;
+
+    public class RunnerBatchIT extends AbstractSeedIT {
         @Inject
         MessageService messageService;
      
         @Test
-        @WithCommandLine(value = {"--job", "mySimpleJob"}, expectedExitCode = 0)
+        @WithCommandLine(
+            command = "run-job", 
+            args = {"--job", "mySimpleJob"}, 
+            expectedExitCode = 0
+        )
         public void testBatch() {
-                assertThat(messageService).isNotNull();
+            assertThat(messageService).isNotNull();
         }
     }
- 
-As illustrated below, note that `@WithCommandLine` can also carry job parameters. Following equivalent syntaxes:
+    
+We could easily use the service (or any injectable class) to check for the batch results. The `@WithCommandLine` annotation
+simulates the running of a command from the operating system command line. All the arguments of the `run-job` command
+can be used in the `args` attribute. Look [here](../running-jobs) for information about these arguments. 
 
-- "`-PparameterKey=parameterValue`" 
-- "`-P parameterKey=parameterValue`"
-- "`--jobParameter", "parameterKey=parameterValue`"
-
-
-    @Test
-    @WithCommandLine(value = {"--job","mySimpleJob","--jobParameter","key=value"}, expectedExitCode=0)
-    public void execute_batch_with_multiple_parameters() {
-        ...
-    }
+{{% callout info %}}
+Note that the test method is called **after** the job is completed. `@Before` annotated methods are executed after Kernel
+startup (so you can use injection in them) but before job execution (so you can prepare a dataset if needed).
+{{% /callout %}}

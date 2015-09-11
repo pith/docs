@@ -47,7 +47,7 @@ while being kept thin.
 
 As a reference, the main DDD tactical patterns and their relations are summarized on the following diagram: 
 
-![tactical-patterns](/img/business/all-domain.png)
+![tactical-patterns](img/all-domain.png)
  
 # References
 

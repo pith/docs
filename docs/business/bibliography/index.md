@@ -15,7 +15,7 @@ DDD, independently of the business framework.
 
 # Eric Evans: Domain-Driven Design
 
-{{< figure src="/img/business/book_ddd.jpg" class="img-thumbnail pull-right" >}}
+{{< figure src="img/book_ddd.jpg" class="img-thumbnail pull-right" >}}
 
 This is the original book of Domain-Driven Design, the one which introduced this approach to the world.
  
@@ -25,7 +25,7 @@ This is the original book of Domain-Driven Design, the one which introduced this
 
 # Vaughn Vernon: Implementing Domain-Driven Design
 
-{{< figure src="/img/business/book_implementing_ddd.jpg" class="img-thumbnail pull-right" >}}
+{{< figure src="img/book_implementing_ddd.jpg" class="img-thumbnail pull-right" >}}
 
 This books builds upon the one from Eric Evans and a decade of DDD experience to provide concrete guidance on
 implementing the DDD in real-world projects. This book is a must-read for anybody looking to put DDD into practice.
@@ -37,7 +37,7 @@ It also addresses the use of DDD in relation to popular architecteral styles lik
 
 # Abel Avram, Floyd Marinescu: Domain-Driven Design Quickly
 
-{{< figure src="/img/business/book_ddd_quickly.jpg" class="img-thumbnail pull-right" >}}
+{{< figure src="img/book_ddd_quickly.jpg" class="img-thumbnail pull-right" >}}
 
 This book is a short, quickly-readable summary and introduction to the fundamentals of DDD; it does not introduce any 
 new concepts; it attempts to concisely summarize the essence of what DDD is, drawing mostly Eric Evans' original book, 

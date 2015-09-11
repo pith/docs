@@ -151,11 +151,11 @@ public class IdentityServiceIT {
 
 # Custom identity handler
 
-![identity-seed](/img/business/manage-entity-spi.svg)
+![identity-seed](img/manage-entity-spi.svg)
 
 Two different options are available to define custom identity handlers:
 
-![identity-seed](/img/business/manage-entity-usage.png)
+![identity-seed](img/manage-entity-usage.png)
 
 Below is an example of a basic Timestamp id generation strategy:
 

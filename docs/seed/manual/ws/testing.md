@@ -41,12 +41,9 @@ public class HelloWSIT extends AbstractSeedWebIT {
 ```
 
 You have to specify the endpoint using `@ArquillianResource URL baseURL`, because Arquillian generates
-a different base URL for each run.
+a different base URL for each run. You may also create standalone integration tests (outside a Web environment and as such, 
+without Arquillian). 
 
-You may also create standalone integration tests (outside a Web environment and as such, without Arquillian).
-
-If you need to do manual testing, you can access the WSDL via HTTP at `http://{server}:{port}/ws/hello?wsdl`. Then you 
-can use a specialized tool like SOAP UI:
-
-![soapUI](/img/seed/ws/soapUI.png)
-
+{{% callout info %}} 
+If you need to do manual testing, you can access the WSDL via HTTP at `http://{server}:{port}/ws/hello?wsdl`.
+{{% /callout %}}

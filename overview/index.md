@@ -46,5 +46,5 @@ complete Bootstrap-based UI solution.
 methodology, it implements all its concepts as read-to-use building blocks. It also provides various services often
 needed around business code.
 
-![Stack diagram](/img/stack.svg)
+![Stack diagram](img/stack.svg)
 

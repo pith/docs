@@ -26,7 +26,7 @@ This example requires `business-core`:
 
  		<dependency>
             <groupId>org.seedstack.seed</groupId>
-            <artifactId>seed-springbatch2-support</artifactId>
+            <artifactId>seed-springbatch-support</artifactId>
         </dependency>
         <dependency>
            <groupId>org.seedstack.business</groupId>
@@ -36,9 +36,8 @@ This example requires `business-core`:
 
 # Create the application context
 
-We need to set up a Spring Batch environment. Spring files have to be in **resources/META-INF/spring** directory.
-
-application-context.xml:
+We need to set up a Spring Batch environment. Spring files must be in the `META-INF/spring` classpath location and end
+with `-context.xml` to be automatically detected. The `application-context.xml` file:
 
     <beans xmlns="http://www.springframework.org/schema/beans"
            xmlns:batch="http://www.springframework.org/schema/batch"
@@ -66,26 +65,27 @@ Description of the beans:
 
 - `JobRepository` : responsible for persistence of batch meta-data information.
 - `JobLauncher` : responsible for launching the batch job.
-- `TransactionManager` : As this example won’t be dealing with transactional data, we are using `ResourcelessTransactionManager` which is mainly used for testing purpose.
+- `TransactionManager` : As this example won’t be dealing with transactional data, we are using `ResourcelessTransactionManager`
+ which is mainly used for testing purpose. **Don't use in production**.
 
 # Create the service
 
-Create a Seed-managed service to illustrate a Seed service injection inside a Spring bean with Interface :
+We will create a service that will be injected directly in a Spring Batch tasklet. The service interface: 
 
-    package org.seedstack.seed.service;
+    package org.myorg.myapp.domain.services;
 
-    import org.seedstack.seed.business.api.application.annotations.ApplicationService;
+    import org.seedstack.seed.business.api.Service;
 
     @Service
     public interface MessageService {
         public String getMessage();
     }
 
-and implementation :
+The service implementation:
 
-    package org.seedstack.seed.service.impl;
+    package org.myorg.myapp.infrastructure.services;
 
-    import org.seedstack.seed.service.MessageService;
+    import org.myorg.myapp.domain.services.MessageService;
 
     public class MessageServiceImpl implements MessageService {
 
@@ -132,9 +132,8 @@ implements `Tasklet` interface and overrides the `execute()` method which prints
 
 # Define the job Configuration
 
-In this section we will configure the Spring Batch job context to use our Tasklet and inject Seed managed `MessageService`.
-
-job-context.xml:
+In this section we will configure the Spring Batch job context to use our Tasklet and inject the `MessageService` Service.
+The `job-context.xml` file:
 
     <beans xmlns="http://www.springframework.org/schema/beans"
            xmlns:batch="http://www.springframework.org/schema/batch"
@@ -149,21 +148,19 @@ job-context.xml:
      
         <import resource="application-context.xml"/>
         
-        <batch:job id="mySimpleJob">
-        
+        <batch:job id="mySimpleJob">        
             <batch:step id="printStep" >
                 <batch:tasklet>
                     <bean class="org.seedstack.seed.batch.tasklet.PrintTasklet">
-                    <property name="messageService">
-                        <seed:instance class="org.seedstack.seed.service.MessageService"/>
-                    </property>
-                </bean>
+                        <property name="messageService">
+                            <seed:instance class="org.seedstack.seed.service.MessageService"/>
+                        </property>                        
+                    </bean>
                 </batch:tasklet>
-            </batch:step>
-        
+            </batch:step>        
         </batch:job>
     </beans>
 
-Above example illustrates the basic structure of a job. A job (`<batch:jobProperty>` tag) is made of steps (`<batch:step>` tag) 
-with a Tasklet (`<batch:tasklet>` tag) and related beans to be injected. Steps are executed one by one following their declarative order. 
-More detail on [Spring Batch documentation](http://docs.spring.io/spring-batch/reference/html/index.html).
+The example above illustrates the basic structure of a job. A job (`<batch:joby>` tag) is made of steps (`<batch:step>` 
+tag) with a Tasklet (`<batch:tasklet>` tag) and irelated beans to be injected. Steps are executed one by one following 
+their declared order. For more information, please read the [Spring Batch documentation](http://docs.spring.io/spring-batch/reference/html/index.html).

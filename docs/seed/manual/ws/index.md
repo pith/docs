@@ -54,13 +54,10 @@ There are two options:
     * Alternative: set the `java.endorsed.dirs` system property to the directory containing `webservices-api.jar`.
     * Documentation is available [here](http://docs.oracle.com/javase/6/docs/technotes/guides/standards/).
 
-2. Eclipse Classpath Override. This method applies only to development for a given project:
+2. IDE classpath override. This method must be applied per-project:
 
-    * Add the overriden library to your classpath as a bootstrap entry (eg. Project build path / Tomcat Classpath) as follows:
-
-    ![BuildPath](/img/seed/ws/eclipse_endorsed1.png)
-
-    * **Important**: overriding JAR has to be loaded first therefore the library has to be loaded before JRE (comes first in classpath). 
+    * Add the `webservices-api.jar` library to the **bootstrap classpath** of your project. This ensures that this library
+    overrides the one in the JRE. 
 
 ### Endorse the Web server
 

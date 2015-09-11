@@ -30,7 +30,7 @@ The main rule of this pattern is that each layer may couple only to itself and b
 only allows to couple to the layer directly below. We recommend to use the **relaxed layers architecture** though, which
 allows any higher-level layer to couple to any layer below it.
 
-![DDD applied to layers architecture](/img/business/layers.png)
+![DDD applied to layers architecture](img/layers.png)
 
 ## Dependency Inversion Principle
 
@@ -48,7 +48,7 @@ states that:
 What does it mean in terms of code, is that a low-level component should implement interfaces defined by high components.
 As such, we can move the infrastructure layer to the side.
 
-![DDD applied to layers architecture](/img/business/layers_dip.png)
+![DDD applied to layers architecture](img/layers_dip.png)
  
 As an example of this architecture, we would have a `JpaCustomerRepository` implementation class which would belong to
 the infrastructure and which implements the `CustomerRepository` interface defined in the domain layer. When injecting
