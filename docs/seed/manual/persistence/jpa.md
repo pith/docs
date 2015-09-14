@@ -6,12 +6,12 @@ zones:
 sections:
     - "SeedPersistence"
 tags:
-    - "maven"
     - "persistence"
     - "jpa"
-    - "configuration"
     - "jndi"
     - "transactions"
+    - "database"
+    - "relational"
 menu:
     SeedPersistence:
         weight: 30

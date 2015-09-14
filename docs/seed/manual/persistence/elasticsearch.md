@@ -7,11 +7,12 @@ sections:
     - "SeedPersistence"
 tags:
     - "elasticsearch"
-    - "configuration"
-    - "example"
+    - "persistence"
+    - "nosql"
+    - "index"
 menu:
     SeedPersistence:
-        weight: 90
+        weight: 70
 ---
 
 

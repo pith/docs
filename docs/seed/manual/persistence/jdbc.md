@@ -8,13 +8,14 @@ sections:
 tags:
     - "persistence"
     - "jdbc"
-    - "datasource"
-    - "configuration"
     - "jndi"
+    - "datasource"
     - "transactions"
+    - "database"
+    - "relational"
 menu:
     SeedPersistence:
-        weight: 30
+        weight: 20
 ---
 
 Seed JDBC persistence support enables your application to interface with any relational database through the JDBC API. 
