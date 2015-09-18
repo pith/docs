@@ -1,8 +1,6 @@
 ---
 title: "All terms"
 type: "home"
-aliases:
-    - /glossary
 zones:
     - "Glossary"
 menu:

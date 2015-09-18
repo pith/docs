@@ -1,5 +1,0 @@
-sudo: false
-
-language: generic
-
-script: "if [ $TRAVIS_PULL_REQUEST = false ]; then curl -s -X POST -H \"Content-Type: application/json\" -H \"Authorization: token $TRAVIS_TOKEN\" -H \"Accept: application/json\" -H \"Travis-API-Version: 3\" -d \"{\\\"request\\\":{\\\"branch\\\":\\\"$TRAVIS_BRANCH\\\"}}\" https://api.travis-ci.org/repo/3967801/requests; fi"

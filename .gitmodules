@@ -1,0 +1,84 @@
+[submodule "addons/spring-bridge"]
+	path = addons/spring-bridge
+	url = https://github.com/seedstack/spring-bridge-addon.git
+	branch = docs
+[submodule "addons/elasticsearch"]
+	path = addons/elasticsearch
+	url = https://github.com/seedstack/elasticsearch-addon.git
+	branch = docs
+[submodule "addons/javamail"]
+	path = addons/javamail
+	url = https://github.com/seedstack/javamail-addon.git
+	branch = docs
+[submodule "addons/jcache"]
+	path = addons/jcache
+	url = https://github.com/seedstack/jcache-addon.git
+	branch = docs
+[submodule "addons/w20-bridge"]
+	path = addons/w20-bridge
+	url = https://github.com/seedstack/w20-bridge-addon.git
+	branch = docs
+[submodule "addons/batch-monitoring"]
+	path = addons/batch-monitoring
+	url = https://github.com/seedstack/batch-monitoring-addon.git
+	branch = docs
+[submodule "addons/audit"]
+	path = addons/audit
+	url = https://github.com/seedstack/audit-addon.git
+	branch = docs
+[submodule "addons/web-services"]
+	path = addons/web-services
+	url = https://github.com/seedstack/web-services-addon.git
+	branch = docs
+[submodule "addons/validation"]
+	path = addons/validation
+	url = https://github.com/seedstack/validation-addon.git
+	branch = docs
+[submodule "addons/solr"]
+	path = addons/solr
+	url = https://github.com/seedstack/solr-addon.git
+	branch = docs
+[submodule "addons/scheduling"]
+	path = addons/scheduling
+	url = https://github.com/seedstack/scheduling-addon.git
+	branch = docs
+[submodule "addons/redis"]
+	path = addons/redis
+	url = https://github.com/seedstack/redis-addon.git
+	branch = docs
+[submodule "addons/neo4j"]
+	path = addons/neo4j
+	url = https://github.com/seedstack/neo4j-addon.git
+	branch = docs
+[submodule "addons/mongodb"]
+	path = addons/mongodb
+	url = https://github.com/seedstack/mongodb-addon.git
+	branch = docs
+[submodule "addons/jpa"]
+	path = addons/jpa
+	url = https://github.com/seedstack/jpa-addon.git
+	branch = docs
+[submodule "addons/jms"]
+	path = addons/jms
+	url = https://github.com/seedstack/jms-addon.git
+	branch = docs
+[submodule "addons/jdbc"]
+	path = addons/jdbc
+	url = https://github.com/seedstack/jdbc-addon.git
+	branch = docs
+[submodule "addons/io"]
+	path = addons/io
+	url = https://github.com/seedstack/io-addon.git
+	branch = docs
+[submodule "addons/i18n"]
+	path = addons/i18n
+	url = https://github.com/seedstack/i18n-addon.git
+	branch = docs
+[submodule "themes/simple"]
+	path = themes/simple
+	url = https://github.com/seedstack/w20-simple-theme.git
+	branch = docs
+[submodule "themes/business"]
+	path = themes/business
+	url = https://github.com/seedstack/w20-business-theme.git
+	branch = docs
