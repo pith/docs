@@ -108,4 +108,4 @@ in your project, beside the composites.
 
 # Archetypes and generators
 
-The distribution also contains multiple archetypes related to 
+The distribution also contains archetypes for different patterns. They provide an easy way to start developping java web applications, batches, implement domains and rest modules.
