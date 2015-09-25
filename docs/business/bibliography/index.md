@@ -29,7 +29,7 @@ This is the original book of Domain-Driven Design, the one which introduced this
 
 This books builds upon the one from Eric Evans and a decade of DDD experience to provide concrete guidance on
 implementing the DDD in real-world projects. This book is a must-read for anybody looking to put DDD into practice.
-It also addresses the use of DDD in relation to popular architecteral styles like REST.
+It also addresses the use of DDD in relation to popular architectural styles like REST.
 
 [Buy it online](http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577).
 
