@@ -37,11 +37,11 @@ are integrated with each other and augmented with features you'll need in enterp
 A W20 application is a Single Page Application (SPA) composed of:
 
 * A master page (often named `index.html`, but it can be dynamically generated). It is the entry point of the application. 
-More information [here](#!/w20-doc/introduction/masterpage).
+More information [here](/docs/w20/concepts).
 * One or more fragment(s). A fragment is a bundle of Web resources described by a JSON manifest which must be accessible 
-by HTTP from the browser. More information [here](#!/w20-doc/introduction/fragments).
+by HTTP from the browser. More information [here](/docs/w20/concepts/fragment).
 * A configuration (often found in a file named `w20.app.json`, but it can also be dynamically generated). More information
-[here](#!/w20-doc/introduction/configuration).
+[here](/docs/w20/concepts/configuration).
 
 ```
     (docroot)
