@@ -29,7 +29,7 @@ To add this support to your project use the following dependency snippet:
 
     <dependency>
         <groupId>org.seedstack.seed</groupId>
-        <artifactId>seed-spring-support</artifactId>
+        <artifactId>seed-spring-support-core</artifactId>
     </dependency>
 
 # Usage
@@ -67,11 +67,11 @@ To use Seed instances in Spring contexts, you need to add the Seed namespace to 
     <?xml version="1.0" encoding="UTF-8"?>
     <beans xmlns="http://www.springframework.org/schema/beans" 
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:seed="http://seed.inetpsa.com/schema/spring-support"
+           xmlns:seed="http://www.seedstack.org/xml-schemas/spring-support"
            
            xsi:schemaLocation="
             http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
-            http://seed.inetpsa.com/schema/spring-support http://seed.inetpsa.com/schema/spring-support-1.1.xsd">
+            http://www.seedstack.org/xml-schemas/spring-support http://www.seedstack.org/xml-schemas/spring-support/spring-support-1.1.xsd">
     
         ...
         
