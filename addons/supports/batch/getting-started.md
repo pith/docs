@@ -42,13 +42,13 @@ with `-context.xml` to be automatically detected. The `application-context.xml` 
     <beans xmlns="http://www.springframework.org/schema/beans"
            xmlns:batch="http://www.springframework.org/schema/batch"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:seed="http://seed.inetpsa.com/schema/spring-support"
+           xmlns:seed="http://www.seedstack.org/xml-schemas/spring-support"
            xsi:schemaLocation="http://www.springframework.org/schema/batch
             http://www.springframework.org/schema/batch/spring-batch-2.2.xsd
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-            http://seed.inetpsa.com/schema/spring-support
-            http://seed.inetpsa.com/schema/spring-support-1.0.xsd">
+            http://www.seedstack.org/xml-schemas/spring-support
+            http://www.seedstack.org/xml-schemas/spring-support/spring-support-1.1.xsd">
      
         <bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
             <property name="transactionManager" ref="transactionManager" />
@@ -138,13 +138,13 @@ The `job-context.xml` file:
     <beans xmlns="http://www.springframework.org/schema/beans"
            xmlns:batch="http://www.springframework.org/schema/batch"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:seed="http://seed.inetpsa.com/schema/spring-support"
+           xmlns:seed="http://www.seedstack.org/xml-schemas/spring-support"
            xsi:schemaLocation="http://www.springframework.org/schema/batch
             http://www.springframework.org/schema/batch/spring-batch-2.2.xsd
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-            http://seed.inetpsa.com/schema/spring-support
-            http://seed.inetpsa.com/schema/spring-support-1.0.xsd">
+            http://www.seedstack.org/xml-schemas/spring-support
+            http://www.seedstack.org/xml-schemas/spring-support/spring-support-1.1.xsd">
      
         <import resource="application-context.xml"/>
         
