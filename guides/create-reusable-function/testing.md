@@ -13,9 +13,9 @@ Functions as applications must be covered with unit tests and integration tests.
 
 You can test the backend modules (i.e. the `specs`, `core` and `rest` modules) in a classic way:
 
-* Writing unit tests for `specs`, `core` and `rest` using the [unit test support]({{< relref "unit.md" >}}),
-* Writing integration tests for `core` using the [integration test support]({{< relref "integration.md" >}}),
-* Writing Web integration tests for `rest` using the [Web integration test support]({{< relref "integration-web.md" >}}),
+* Writing unit tests for `specs`, `core` and `rest` using the [unit test support](/docs/seed/manual/testing),
+* Writing integration tests for `core` using the [integration test support](/docs/seed/manual/testing#simple-integration-tests),
+* Writing Web integration tests for `rest` using the [Web integration test support](/docs/seed/manual/testing#web-integration-tests),
 
 # Frontend test
 
