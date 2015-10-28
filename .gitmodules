@@ -18,9 +18,9 @@
 	path = addons/w20-bridge
 	url = https://github.com/seedstack/w20-bridge-addon.git
 	branch = docs
-[submodule "addons/batch-monitoring"]
-	path = addons/batch-monitoring
-	url = https://github.com/seedstack/batch-monitoring-addon.git
+[submodule "addons/monitoring"]
+	path = addons/monitoring
+	url = https://github.com/seedstack/monitoring-addon.git
 	branch = docs
 [submodule "addons/audit"]
 	path = addons/audit
