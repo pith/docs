@@ -44,7 +44,8 @@ following form:
         // module factory function body (private scope of the module)
     
         return {
-            // public signature of the module that can be injected when requested as a dependency of another module
+            // public signature of the module that can be injected 
+            // when requested as a dependency of another module
         };
     });
 
