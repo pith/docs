@@ -156,15 +156,20 @@ Try to avoid the legacy Properties format if possible.
 
 A few configuration values must be configured in a special configuration file that **must** be named `seed.props` (or 
 `seed.properties`). This file must also be put in the `META-INF/configuration` folder. The most frequent usage of this 
-file is to define the package(s) that Seed must scan. You can do so with the following :
+file is to define the base package(s) that Seed must scan. You can do so with the following :
 
-    package-roots = org.my.package, com.my.other.package, ...
+```ini
+[org.seedstack.seed]
+base-packages = org.my.package, com.my.other.package, ...
+```
 
 {{% callout warning %}}
-It is important to set the `package-roots` property of bootstrap configuration for Seed to scan your classes. If you omit
-to do so, Seed will only scan `org.seedstack` and its sub-packages by default.
+It is important to set the `org.seedstack.seed.base-packages` property of bootstrap configuration for Seed to scan your classes. If you omit to do so, Seed will only scan `org.seedstack` and its sub-packages by default.
 {{% /callout %}}
 
+{{% callout tips %}}
+Note that the bootstrap configuration contents will also be available as normal application configuration. As such, you can choose to put all your configuration (bootstrap or not) in this file.
+{{% /callout %}}
 
 ## Props format
 
