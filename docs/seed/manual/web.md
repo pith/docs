@@ -95,7 +95,7 @@ specified roles. Multiple roles can be specified with commas: `roles[manager, ad
 ### Custom filters
 
 You can define you own custom security filters by creating a class implementing {{< java "javax.servlet.Filter" >}} and 
-annotating it with {{< java "org.seedstack.seed.web.api.security.SecurityFilter" "@" >}}. The annotation value will define 
+annotating it with {{< java "org.seedstack.seed.web.security.SecurityFilter" "@" >}}. The annotation value will define 
 the name of the filter that can be used in filter chains. 
 
 As an example, consider a filter that always returns HTTP response code 418:
@@ -153,7 +153,7 @@ where action is dependent upon the HTTP method used (see the `rest` filter defin
 
 # Servlets and Filters
 
-You can register a servlet and its mappings automatically by annotating your servlet class with {{< java "org.seedstack.seed.web.api.WebServlet" >}}:
+You can register a servlet and its mappings automatically by annotating your servlet class with {{< java "org.seedstack.seed.web.WebServlet" >}}:
 
     @WebServlet(
         value = "/myservlet/*", 
@@ -163,7 +163,7 @@ You can register a servlet and its mappings automatically by annotating your ser
         ...
     }
 
-Similarly, you can register a filter and its mappings automatically by annotating your servlet class with {{< java "org.seedstack.seed.web.api.WebFilter" >}}:
+Similarly, you can register a filter and its mappings automatically by annotating your servlet class with {{< java "org.seedstack.seed.web.WebFilter" >}}:
 
     @WebFilter(
         value = "/myfilter/*", 

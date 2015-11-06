@@ -221,7 +221,7 @@ org.seedstack.seed.security.realms = list of realms to use
 ```
     
 The realm name correspond to the simple name of the Java class that implements the realm. For instance to enable the
-LDAP realm (which is implemented in the {{< java "org.seedstack.seed.security.ldap.internal.realms.LDAPRealm" >}} Java class), use 
+LDAP realm (which is implemented in the {{< java "org.seedstack.ldap.internal.realms.LDAPRealm" >}} Java class), use 
 the following configuration:
 
 ```ini
@@ -389,7 +389,7 @@ There are two annotations that checks for authorizations before allowing method 
 * `@RequiresPermissions` which checks that the current subject has one or more permission(s) before allowing to execute
 the method.
 
-When the security check fails, an exception of type {{< java "org.seedstack.seed.security.api.exceptions.AuthorizationException" >}}
+When the security check fails, an exception of type {{< java "org.seedstack.seed.security.AuthorizationException" >}}
 is thrown.
 
 {{% callout warning %}}
@@ -415,7 +415,7 @@ public void createAccount(Account account) {
 ## Programmatic checks
 
 If annotation-based security checks cannot be used, or if an programmatic style is preferred, the 
-{{< java "org.seedstack.seed.security.api.SecuritySupport" >}} facade can be used. It provides various methods to explicitly check for 
+{{< java "org.seedstack.seed.security.SecuritySupport" >}} facade can be used. It provides various methods to explicitly check for 
 current subject authorizations. It is more versatile than annotation-based checks and it is required when checking 
 dynamically generated authorizations. To use it, simply inject it where needed:
 
@@ -513,7 +513,7 @@ For more information on how to override the configuration for testing, refer to 
 
 ## Subject authentication
 
-To authenticate a subject before a test method is executed, use the {{< java "org.seedstack.seed.security.api.WithUser" "@" >}} annotation:
+To authenticate a subject before a test method is executed, use the {{< java "org.seedstack.seed.security.WithUser" "@" >}} annotation:
 
 	@RunWith(SeedITRunner.class)
 	public class MyITWithSecurity {

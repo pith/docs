@@ -81,7 +81,7 @@ A factory interface has to extend the `GenericFactory` interface.
 package org.mycompany.myapp.domain.model.order;
 
 import org.javatuples.Triplet;
-import org.seedstack.business.api.domain.GenericFactory;
+import org.seedstack.business.domain.GenericFactory;
 
 public interface OrderFactory extends GenericFactory<Order> {
 
@@ -108,7 +108,7 @@ A factory implementation should:
 package org.mycompany.myapp.domain.model.order;
 
 import org.javatuples.Triplet;
-import org.seedstack.business.api.domain.BaseFactory;
+import org.seedstack.business.domain.BaseFactory;
 import org.mycompany.myapp.domain.customer.CustomerId;
 
 public class OrderFactoryImpl extends BaseFactory<Order> implements OrderFactory {

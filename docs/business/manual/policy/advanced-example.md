@@ -46,7 +46,7 @@ Here is the policy exposed interface:
 package org.mycompany.myapp.carsale.domain.candidate.policy;
 
 import org.mycompany.myapp.carsale.domain.candidate.CandidateSeller;
-import org.seedstack.business.api.domain.DomainPolicy;
+import org.seedstack.business.domain.DomainPolicy;
 
 @DomainPolicy
 public interface SellerEligibilityPolicy {
@@ -82,7 +82,7 @@ Since the policy has different behaviours (ie. default, with a handicap):
 package org.mycompany.myapp.carsale.domain.candidate.policy;
 
 import org.mycompany.myapp.carsale.domain.candidate.CandidateSeller;
-import org.seedstack.business.api.domain.GenericFactory;
+import org.seedstack.business.domain.GenericFactory;
 
 public interface SellerEligibilityPolicyFactory
         extends GenericFactory<SellerEligibilityPolicy> {

@@ -38,7 +38,7 @@ The default repository can be configured for all the application:
 
 ```
 [org.example.*]
-default.repository.qualifier=org.seedstack.seed.persistence.jpa.api.Jpa
+default.repository.qualifier=org.seedstack.jpa.Jpa
 ```
 
 And then overriden for a specific aggregate root:
@@ -63,7 +63,7 @@ First create a repository interface extending `GenericRepository`.
 This interface is usually located in the aggregate package.
 
 ```
-import org.seedstack.business.api.domain.Repository;
+import org.seedstack.business.domain.Repository;
 
 public interface OrderRepository extends GenericRepository<Order, Long> {
 

@@ -104,7 +104,7 @@ This also allows you to interact programatically with any registered metrics.
 
 An health check is a class that will check a specific state of the application and report it. To create an health check, 
 you must extend the {{< java "com.codahale.metrics.health.HealthCheck" >}} class and annotate it with the 
-{{< java "org.seedstack.seed.metrics.api.HealthChecked" "@" >}} annotation:
+{{< java "org.seedstack.seed.metrics.HealthChecked" "@" >}} annotation:
 
     @HealthChecked
 	public class GoodHealthCheck extends HealthCheck {
@@ -158,7 +158,7 @@ recommended to configure a real SSH key.**
 
 ## Commands
 
-All commands registered in the {{< java "org.seedstack.seed.core.api.CommandRegistry" >}} can be invoked from both interactive 
+All commands registered in the {{< java "org.seedstack.seed.CommandRegistry" >}} can be invoked from both interactive 
 and direct modes. You can specify command name, arguments and options using a GNU-like syntax:
 
     [scope:]cmdname -s -sval --long-option --long-option-with-arg=argval arg0 arg1 arg2…

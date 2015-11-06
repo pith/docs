@@ -78,9 +78,9 @@ inferred ones, which in turn always take precedence over the default ones.**
 
 # Demarcation via annotation
 
-Transaction metadata can be explicitly specified through {{< java "org.seedstack.seed.transaction.api.Transactional" "@" >}} annotation and associated annotations (for
+Transaction metadata can be explicitly specified through {{< java "org.seedstack.seed.transaction.Transactional" "@" >}} annotation and associated annotations (for
 each type of transactional resource). These annotations can be placed on methods, classes, interfaces and other annotations.
-The search for the {{< java "org.seedstack.seed.transaction.api.Transactional" "@" >}} annotation starts for all methods of any Seed managed class, using the following order:
+The search for the {{< java "org.seedstack.seed.transaction.Transactional" "@" >}} annotation starts for all methods of any Seed managed class, using the following order:
 
 * The method and any annotation on this method,
 * The declaring class and any annotation on this class,
@@ -88,7 +88,7 @@ The search for the {{< java "org.seedstack.seed.transaction.api.Transactional" "
 	* The overridden method and any annotation on this method,
 	* The class/interface and any annotation on this class.
 	
-If no {{< java "org.seedstack.seed.transaction.api.Transactional" "@" >}} annotation is found when the top of the class hierarchy is reached, the method is not transactional
+If no {{< java "org.seedstack.seed.transaction.Transactional" "@" >}} annotation is found when the top of the class hierarchy is reached, the method is not transactional
 and not intercepted at all.
 
 # Automatic metadata resolution
@@ -110,10 +110,10 @@ Seed provides a built-in always active resolver which automatically associate th
 one is available. In this case, it is not necessary to explicitly specify the corresponding transaction handler.
 
 Other Seed modules can register their own resolvers that will infer more transaction metadata for specific contexts. For
-instance the JMS add-on can automatically detect the transacted resource when the {{< java "org.seedstack.seed.transaction.api.Transactional" "@" >}} annotation is used
+instance the JMS add-on can automatically detect the transacted resource when the {{< java "org.seedstack.seed.transaction.Transactional" "@" >}} annotation is used
 inside a JMS listener. More documentation is available in modules where this is applicable.
 
-Remember that an explicitly specified {{< java "org.seedstack.seed.transaction.api.Transactional" "@" >}} annotation will always override any automatically resolved metadata.
+Remember that an explicitly specified {{< java "org.seedstack.seed.transaction.Transactional" "@" >}} annotation will always override any automatically resolved metadata.
 
 # Examples
 
